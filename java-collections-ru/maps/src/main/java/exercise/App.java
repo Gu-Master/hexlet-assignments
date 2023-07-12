@@ -12,12 +12,13 @@ public class App {
     public static Map getWordCount(String sentens) {
         String[] strArr = sentens.split(" ");
         Map<String, Integer> map = new HashMap<>();
-        for (String word: strArr) {
+        for (String word : strArr) {
             map.put(word, Collections.frequency(Arrays.asList(strArr), word));
         }
         return map;
 
     }
+
     public static String toString(Map<String, Integer> map) {
         StringBuilder str = new StringBuilder();
         str.append("{\n");
@@ -27,11 +28,6 @@ public class App {
         }
         str.append("}");
         return str.toString();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(App.toString(App.getWordCount("i love dog i dog ")));
-
     }
 
 }
